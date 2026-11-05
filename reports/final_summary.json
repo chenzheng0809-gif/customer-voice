@@ -1,0 +1,82 @@
+[
+  {
+    "task": "intent",
+    "model": "bert-intent",
+    "epochs": 2,
+    "n_train": 1844,
+    "n_test": 382,
+    "n_ood": 20,
+    "accuracy": 0.8664921465968587,
+    "macro_f1": 0.8677997398846511,
+    "ood_accuracy": 0.75,
+    "real_corpus_accuracy": null,
+    "negative_recall": null,
+    "labels": [
+      "咨询",
+      "投诉",
+      "物流",
+      "退款"
+    ],
+    "confusion_matrix": [
+      [
+        106,
+        0,
+        0,
+        1
+      ],
+      [
+        3,
+        94,
+        25,
+        0
+      ],
+      [
+        0,
+        16,
+        63,
+        6
+      ],
+      [
+        0,
+        0,
+        0,
+        68
+      ]
+    ]
+  },
+  {
+    "task": "sentiment",
+    "model": "bert-sentiment",
+    "epochs": 2,
+    "n_train": 1844,
+    "n_test": 382,
+    "n_ood": 20,
+    "accuracy": 0.8586387434554974,
+    "macro_f1": 0.8282967032967034,
+    "ood_accuracy": 0.85,
+    "real_corpus_accuracy": 0.9083333333333333,
+    "negative_recall": 0.9005524861878453,
+    "labels": [
+      "中性",
+      "正面",
+      "负面"
+    ],
+    "confusion_matrix": [
+      [
+        141,
+        0,
+        20
+      ],
+      [
+        16,
+        24,
+        0
+      ],
+      [
+        18,
+        0,
+        163
+      ]
+    ]
+  }
+]

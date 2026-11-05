@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# 模型权重（体积大，用 final_train.py 重新生成）
+models/bert-*/
+models/*.joblib
+
+# 数据库（可重建：build_dataset.py + build_db.py）
+db/*.sqlite
+
+# 生成的中间产物
+data/frames.csv
+data/dialogues.jsonl
+reports/summary.json
+
+# macOS
+.DS_Store
+# 公开语料原始文件（体积大，按 DATA_SOURCES.md 重新下载）
+data/external/*.csv
+data/external/*.arrow
+data/external_sentiment.parquet

@@ -1,0 +1,20 @@
+{"text": "您的服务真是让我感动，感动到想直接起诉你们", "intent": "投诉", "sentiment": "负面"}
+{"text": "我不是来找茬的，只是想问问这算不算虚假宣传", "intent": "投诉", "sentiment": "负面"}
+{"text": "好的，那我等，等到你们愿意解决了为止", "intent": "投诉", "sentiment": "负面"}
+{"text": "不打扰你们了，我直接找 12315 吧", "intent": "投诉", "sentiment": "负面"}
+{"text": "嗯，收到。那这事儿谁负责", "intent": "投诉", "sentiment": "负面"}
+{"text": "可以，那就按你说的办，不过我会保留评价", "intent": "投诉", "sentiment": "负面"}
+{"text": "问一下，是不是得等到下个月才能收到", "intent": "物流", "sentiment": "负面"}
+{"text": "这东西到底还要几天，给我个准信", "intent": "物流", "sentiment": "负面"}
+{"text": "你们仓库是放假了吗，都没人理", "intent": "物流", "sentiment": "负面"}
+{"text": "麻烦帮个忙，这个我想退，实在用不惯", "intent": "退款", "sentiment": "负面"}
+{"text": "东西我留着了，钱能退一半吗", "intent": "退款", "sentiment": "中性"}
+{"text": "刚才手滑下了的单，能撤不", "intent": "退款", "sentiment": "中性"}
+{"text": "能简单说下这个的材质构成吗", "intent": "咨询", "sentiment": "中性"}
+{"text": "我想确认下你们的营业时间", "intent": "咨询", "sentiment": "中性"}
+{"text": "有没有适合送人的套装", "intent": "咨询", "sentiment": "中性"}
+{"text": "用着挺舒服，想再买一个送我妈，有五折吗", "intent": "咨询", "sentiment": "正面"}
+{"text": "上次那个客服真的救了我一命，太感谢了", "intent": "咨询", "sentiment": "正面"}
+{"text": "终于收到啦，虽然慢了点但东西很好", "intent": "物流", "sentiment": "正面"}
+{"text": "这售后效率真是没谁了，三天回一句", "intent": "投诉", "sentiment": "负面"}
+{"text": "行吧，我认了，你们开心就好", "intent": "投诉", "sentiment": "负面"}

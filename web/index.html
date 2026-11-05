@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>客户对话智能分析 · 看板</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>客户对话智能分析</h1>
+  <p class="sub">意图分类 + 情感分析 · 数据来自 SQLite，模型指标可追溯</p>
+</header>
+
+<nav class="tabs">
+  <button class="tab active" data-tab="overview">总览</button>
+  <button class="tab" data-tab="sessions">会话</button>
+  <button class="tab" data-tab="models">模型对比</button>
+  <button class="tab" data-tab="badcases">Badcase</button>
+  <button class="tab" data-tab="analyze">在线分析</button>
+</nav>
+
+<main>
+  <!-- 总览 -->
+  <section id="tab-overview" class="panel active">
+    <div class="cards" id="kpi"></div>
+    <div class="row">
+      <div class="box">
+        <h2>情感分布</h2>
+        <div id="sent-bars" class="bars"></div>
+      </div>
+      <div class="box">
+        <h2>意图 × 情感 交叉</h2>
+        <div id="cross-heat" class="heat"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 会话 -->
+  <section id="tab-sessions" class="panel">
+    <div class="toolbar">
+      <label><input type="checkbox" id="risk-only"> 只看高风险会话（负面占比 ≥ 50%）</label>
+      <span class="hint">点击行查看对话明细</span>
+    </div>
+    <table id="sess-table">
+      <thead><tr><th>会话</th><th>客户消息</th><th>负面</th><th>负面占比</th><th></th></tr></thead>
+      <tbody></tbody>
+    </table>
+    <div id="sess-detail" class="detail"></div>
+  </section>
+
+  <!-- 模型对比 -->
+  <section id="tab-models" class="panel">
+    <div class="box">
+      <h2>指标对比</h2>
+      <table id="model-table">
+        <thead><tr><th>模型</th><th>任务</th><th>Accuracy</th><th>Macro-F1</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="hint">同一测试集，主体句级别隔离，训练/测试无句子重合。</p>
+    </div>
+    <div class="box">
+      <h2>意图混淆矩阵（baseline）</h2>
+      <div id="confusion" class="heat"></div>
+    </div>
+  </section>
+
+  <!-- Badcase -->
+  <section id="tab-badcases" class="panel">
+    <p class="hint">两边都判错、且置信度最高的样本 —— 优先人工复查。</p>
+    <div id="badcase-list"></div>
+  </section>
+
+  <!-- 在线分析 -->
+  <section id="tab-analyze" class="panel">
+    <div class="box">
+      <h2>输入一句话试试</h2>
+      <textarea id="analyze-input" rows="3" placeholder="例如：这东西到底还要几天，给我个准信"></textarea>
+      <button id="analyze-btn">分析</button>
+      <div id="analyze-out" class="result"></div>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

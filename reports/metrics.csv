@@ -1,0 +1,3 @@
+task,model,accuracy,macro_f1,ood_accuracy
+intent,baseline,0.7486910994764397,0.744756218423122,0.65
+sentiment,baseline,0.6675392670157068,0.45634920634920634,0.65

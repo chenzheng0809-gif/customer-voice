@@ -1,0 +1,20 @@
+# 核心依赖（数据层 + baseline 模型，几十 MB，装完即可跑 --fast）
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+scikit-learn>=1.3
+joblib>=1.3
+pyarrow>=14.0
+
+# 深度学习（约 200MB+，跑 BERT 微调才需要）
+torch>=2.0
+transformers>=4.30
+
+# OCR 支线
+rapidocr-onnxruntime>=1.3
+opencv-python>=4.8
+pillow>=10.0
+
+# 下载公开语料时用到（src/import_external.py 只用 pandas 读 CSV，
+# 这里列出是为了方便用 datasets 库做进一步探索）
+# datasets>=4.0
