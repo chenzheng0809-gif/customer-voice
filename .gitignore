@@ -21,3 +21,7 @@ reports/summary.json
 data/external/*.csv
 data/external/*.arrow
 data/external_sentiment.parquet
+
+# 截图用的临时 Chrome 配置
+.chrome-tmp*/
+.tmpchrome/

@@ -1,9 +1,33 @@
 # 客户对话智能分析平台
 
+[![CI](https://github.com/chenzheng0809-gif/customer-voice/actions/workflows/ci.yml/badge.svg)](https://github.com/chenzheng0809-gif/customer-voice/actions/workflows/ci.yml)
+
 把电商客服的对话记录变成**可追溯、可对比**的意图与情感分析结果，并配一个能交互的 Web 看板。
 
 > 核心不是"能分类"，而是**每个数字都说得清来路**：预测结果带模型版本和置信度入库，
 > baseline 与微调模型跑同一套无泄漏测试集，指标并排放。
+
+![看板总览](docs/screenshots/overview.png)
+
+*总览页：会话/消息计数、情感分布、意图 × 情感交叉表。所有数字来自 SQLite，
+前端不硬编码任何值。*
+
+## 和其他项目的关系
+
+同一个 GitHub 账号下还有一个 [`crossborder-review-analytics`](https://github.com/chenzheng0809-gif/crossborder-review-analytics)，
+两者都用 OCR + 情感分析 + SQLite + 原生 JS，但**解决的问题不同**：
+
+| | crossborder-review-analytics | **本项目 customer-voice** |
+|---|---|---|
+| 场景 | 跨境电商 5 站点 × 6 语言 | 中文客服单场景 |
+| 核心难点 | 多语言、多源接入、脏数据清洗（去重/时区/繁简） | **模型评测的严谨性** |
+| 数据 | 真实接口导出 + 买家截图 | 合成对话 + 公开语料 ChnSentiCorp |
+| 重心 | 数据流管道、i18n | 数据泄漏排查、回归测试、多口径指标对照 |
+| 一句话 | "瓶颈不是框架，是数据流的正确性" | "瓶颈不是能不能分类，是指标可不可信" |
+
+两个项目互补：前者解决"数据怎么接进来"，后者解决"接进来之后模型到底靠不靠谱"。
+
+---
 
 ## 克隆后怎么跑
 
